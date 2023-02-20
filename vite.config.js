@@ -7,5 +7,11 @@ export default defineConfig({
         open: true,
         port: 5173
     },
+    test: {
+        globals: true,
+        environment: "jsdom",
+        setupFiles: ["./src/__tests__/setup.js"]
+    }
 });
+
 
