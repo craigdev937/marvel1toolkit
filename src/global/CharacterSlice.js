@@ -3,8 +3,7 @@ import { API } from "./FetchAPI";
 
 const initialState = {
     characters: [],
-    loading: false,
-    error: Error
+    loading: false
 };
 
 const CharacterSlice = createSlice({
@@ -13,14 +12,12 @@ const CharacterSlice = createSlice({
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(API.getCharacters.rejected, 
-        (state, action) => {
-            state.loading = false,
-            state.error = action.payload.error
+        (state) => {
+            state.loading = false
         }),
         builder.addCase(API.getCharacters.pending, 
         (state) => {
-            state.loading = true,
-            state.error = null
+            state.loading = true
         }),
         builder.addCase(API.getCharacters.fulfilled, 
         (state, action) => {

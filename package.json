@@ -12,8 +12,8 @@
     "type": "git",
     "url": "git+https://github.com/craigdev937/marvel1toolkit.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["React", "Fetch API", "React Router", "Marvel API", "Redux-Toolkit", "Vite", "Vitest"],
+  "author": "Craig Johnson",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/craigdev937/marvel1toolkit/issues"

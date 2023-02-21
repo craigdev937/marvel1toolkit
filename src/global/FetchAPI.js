@@ -16,11 +16,11 @@ class FetchAPI {
     });
 
     searchCharacters = createAsyncThunk(
-        "comics/searchCharacters", 
+        "searches/searchCharacters", 
     async (query) => {
         const res = await fetch(`${URL
             }/characters?nameStartsWith=${
-                query}ts=1&apikey={${
+                query}&ts=1&apikey=${
                     api_key}&hash=${hash_key}`);
         if (!res.ok) throw new Error(res.statusText);
         const data = await res.json();
