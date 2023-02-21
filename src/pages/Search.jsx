@@ -1,9 +1,10 @@
 import React from "react";
-import "./Media.css";
+import "./Search.css";
 import { useSelector, useDispatch } from "react-redux";
 import { API } from "../global/FetchAPI";
+import { SearchInfo } from "../components/SearchInfo";
 
-export const Media = () => {
+export const Search = () => {
     const [query, setQuery] = React.useState("");
     const dispatch = useDispatch();
     const loading = useSelector((state) => state.searches.loading);
@@ -36,14 +37,11 @@ export const Media = () => {
                 </form>
             </section>
             <section>
-                {searches.map((media) => (
-                    <aside key={media.id}>
-                        <h1>{media.name}</h1>
-                        <p>{`id: ${media.id}`}</p>
-                        <img 
-                            alt={media.name}
-                            src={`${media.thumbnail.path
-                            }.${media.thumbnail.extension}`} 
+                {searches.map((search) => (
+                    <aside key={search.id}>
+                        <SearchInfo 
+                            key={search.id} 
+                            search={search}
                         />
                     </aside>
                 ))}

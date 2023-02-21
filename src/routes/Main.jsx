@@ -5,7 +5,7 @@ import { NotFound } from "../components/NotFound";
 import { Navbar } from "./Navbar";
 import { Home } from "../pages/Home";
 import { Comic } from "../pages/Comic";
-import { Media } from "../pages/Media";
+import { Search } from "../pages/Search";
 
 const ReactRouter = createBrowserRouter([
     {
@@ -19,8 +19,8 @@ const ReactRouter = createBrowserRouter([
                 errorElement: <NotFound />
             },
             {
-                path: "/media",
-                element: <Media />,
+                path: "/search",
+                element: <Search />,
                 errorElement: <NotFound />
             },
             {
