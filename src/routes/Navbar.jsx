@@ -14,9 +14,6 @@ export const Navbar = () => {
                     <li>
                         <Link to="/search">Search</Link>
                     </li>
-                    <li>
-                        <Link to="/comic">Comic</Link>
-                    </li>
                 </ul>
             </nav>
             <Outlet />

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const SearchInfo = ({ search }) => {
     return (
@@ -11,6 +12,7 @@ export const SearchInfo = ({ search }) => {
                     src={`${search.thumbnail.path
                     }.${search.thumbnail.extension}`} 
                 />
+                <Link to={`/${search.id}`}>Details</Link>
             </aside>
         </React.Fragment>
     );

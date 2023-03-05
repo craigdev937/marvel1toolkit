@@ -4,7 +4,7 @@ import { createBrowserRouter,
 import { NotFound } from "../components/NotFound";
 import { Navbar } from "./Navbar";
 import { Home } from "../pages/Home";
-import { Comic } from "../pages/Comic";
+import { Detail } from "../pages/Detail";
 import { Search } from "../pages/Search";
 
 const ReactRouter = createBrowserRouter([
@@ -24,8 +24,8 @@ const ReactRouter = createBrowserRouter([
                 errorElement: <NotFound />
             },
             {
-                path: "/comic",
-                element: <Comic />,
+                path: "/:id",
+                element: <Detail />,
                 errorElement: <NotFound />
             }
         ]

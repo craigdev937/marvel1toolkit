@@ -18,11 +18,10 @@ export const Home = () => {
     return (
         <React.Fragment>
             <h1>Home Page</h1>
-            {characters.map((character) => (
-                <section key={character.id}>
+            {characters.map((char) => (
+                <section key={char.id}>
                     <Character 
-                        key={character.id} 
-                        character={character} 
+                        char={char} 
                     />
                 </section>
             ))}

@@ -5,7 +5,8 @@ import { SearchReducer } from "./SearchSlice";
 export const Reducer = configureStore({
     reducer: {
         characters: CharacterReducer,
-        searches: SearchReducer
+        searches: SearchReducer,
+        details: () => "Search Character by ID"
     },
 });
 
